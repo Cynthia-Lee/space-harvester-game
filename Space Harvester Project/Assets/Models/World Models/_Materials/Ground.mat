@@ -29,4 +29,4 @@ Material:
     m_Floats:
     - _EmissionLM: 0
     m_Colors:
-    - _Color: {r: 0.6056556, g: 0.6911765, b: 0.071150504, a: 1}
+    - _Color: {r: 0.5254902, g: 0.31764707, b: 0.34901962, a: 1}
