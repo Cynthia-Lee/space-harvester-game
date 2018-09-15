@@ -6,23 +6,23 @@ public class OreClick : MonoBehaviour {
 
     public static double progress = 0;
     private double rawScoreMultiplier = 1.5;
-<<<<<<< HEAD
+//<<<<<<< HEAD
     
-    //public double getProg()
-    //{
-    //    return progress;
-    //}
+    public double getProg()
+    {
+        return progress;
+    }
 
-	private void Update ()
-=======
+	//private void Update ()
+//=======
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+       // Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Update ()
->>>>>>> 78dc8644db1035591c2c4763357691000383817c
+//>>>>>>> 78dc8644db1035591c2c4763357691000383817c
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -66,14 +66,6 @@ public class OreClick : MonoBehaviour {
 
         }
 
-        //if ()   //ESC is pushed or time runs out.
-        //{
-//<<<<<<< HEAD
-        //   MissionScore();
-//=======
-        //    MissionScore();
-//>>>>>>> 8d39e9b7095213c4e6388eee61cd44e10dbf0ad0
-        //}
     }
 
     private void PrintName(GameObject ob)
