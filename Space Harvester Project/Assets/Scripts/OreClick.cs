@@ -53,11 +53,11 @@ public class OreClick : MonoBehaviour {
 
         //if ()   //ESC is pushed or time runs out.
         //{
-<<<<<<< HEAD
+//<<<<<<< HEAD
         //   MissionScore();
-=======
+//=======
         //    MissionScore();
->>>>>>> 8d39e9b7095213c4e6388eee61cd44e10dbf0ad0
+//>>>>>>> 8d39e9b7095213c4e6388eee61cd44e10dbf0ad0
         //}
     }
 
