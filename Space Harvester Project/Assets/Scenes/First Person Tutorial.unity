@@ -430,8 +430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivityX: 250
   mouseSensitivityY: 250
-  walkSpeed: 5
-  jumpForce: 220
+  walkSpeed: 3
+  jumpForce: 250
   groundedMask:
     serializedVersion: 2
     m_Bits: 512
