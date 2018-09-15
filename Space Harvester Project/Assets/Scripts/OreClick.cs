@@ -6,6 +6,7 @@ public class OreClick : MonoBehaviour {
 
     public static double progress = 0;
     private double rawScoreMultiplier = 1.5;
+<<<<<<< HEAD
     
     //public double getProg()
     //{
@@ -13,13 +14,22 @@ public class OreClick : MonoBehaviour {
     //}
 
 	private void Update ()
+=======
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    private void Update ()
+>>>>>>> 78dc8644db1035591c2c4763357691000383817c
     {
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            if (Physics.Raycast(ray, out hit, 5.0f))
             {
                 if (hit.collider.gameObject.tag.Contains("ore"))   //Contains method? Instead of having to write 5 if loops.
                 {
