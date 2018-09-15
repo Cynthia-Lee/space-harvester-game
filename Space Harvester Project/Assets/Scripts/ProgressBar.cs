@@ -31,7 +31,7 @@ public class ProgressBar : MonoBehaviour {
         double val = new OreClick().getProgress();
         float ratio = (float)(val / max);
         //need to make sure it doesn't go over 100...
-        currentProgress.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        currentProgress.transform.localScale = Vector3.Scale(transform.localScale, new Vector3(ratio, 1f, 1f));
         barText.text = val.ToString() + '%';
     }
 
