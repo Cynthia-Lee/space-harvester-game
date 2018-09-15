@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OreClick : MonoBehaviour {
+public class OreClick : MonoBehaviour
+{
 
-    public static double progress = 0;
+    private double progress = 0;
     private double rawScoreMultiplier = 1.5;
-//<<<<<<< HEAD
-    
-    public double getProg()
-    {
-        return progress;
-    }
-
-	//private void Update ()
-//=======
 
     private void Start()
     {
-       // Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
-    private void Update ()
-//>>>>>>> 78dc8644db1035591c2c4763357691000383817c
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -61,16 +52,24 @@ public class OreClick : MonoBehaviour {
                     }
 
                 }
-          
+
             }
 
         }
 
+        //if ()   //ESC is pushed or time runs out.
+        //{
+        //<<<<<<< HEAD
+        //   MissionScore();
+        //=======
+        //    MissionScore();
+        //>>>>>>> 8d39e9b7095213c4e6388eee61cd44e10dbf0ad0
+        //}
     }
 
     private void PrintName(GameObject ob)
     {
-        print(ob.name); 
+        print(ob.name);
     }
 
     private void MineOre(GameObject ore)
@@ -85,7 +84,8 @@ public class OreClick : MonoBehaviour {
         if (progress > 91)
         {
             score += "You earned an A! Superb mining!";
-        } else if (progress > 80 && progress < 91)
+        }
+        else if (progress > 80 && progress < 91)
         {
             score += "You earned a B+. You did a great job!";
         }

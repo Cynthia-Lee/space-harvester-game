@@ -9,7 +9,7 @@ public class FirstPersonController : MonoBehaviour {
     public float walkSpeed = 5f;
     //public float runSpeed; //GET TO THIS LATER, if the run key is down then multiply targetMoveAmount = moveDir * runspeed
     //maybe no run because it is in space
-    public float jumpForce = 225;
+    public float jumpForce = 220;
     public LayerMask groundedMask;
 
     Transform cameraT;
