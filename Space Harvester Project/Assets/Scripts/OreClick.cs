@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OreClick : MonoBehaviour {
+
+    private double progress = 0;
     
 	private void Update ()
     {
@@ -13,14 +15,39 @@ public class OreClick : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                if (hit.collider.gameObject.tag == "ore")   //Contains method? Instead of having to write 5 if loops.
+                if (hit.collider.gameObject.tag.Contains("ore"))   //Contains method? Instead of having to write 5 if loops.
                 {
                     if (hit.transform.GetComponent<Rigidbody>())
                     {
                         GameObject clickedOre = hit.transform.gameObject;
+                        string value = clickedOre.gameObject.tag;
+                        if(value == "ore1")
+                        {
+                            progress += (1 * 1.5);
+                            print(progress);
+                        }
+                        if(value == "ore2")
+                        {
+                            progress += (2 * 1.5);
+                            print(progress);
+                        }
+                        if(value == "ore 3")
+                        {
+                            progress += (3 * 1.5);
+                        }
+                        if(value == "ore4")
+                        {
+                            progress += (4 * 1.5);
+                        }
+                        if(value == "ore5")
+                        {
+                            progress += (5 * 1.5);
+                        }
                         PrintName(clickedOre);
                         MineOre(clickedOre);
+                        print(progress);
                     }
+
                 }
           
             }
