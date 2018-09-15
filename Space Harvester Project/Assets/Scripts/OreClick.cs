@@ -51,10 +51,10 @@ public class OreClick : MonoBehaviour {
 
         }
 
-        if ()   //ESC is pushed or time runs out.
-        {
-            MissionScore();
-        }
+        //if ()   //ESC is pushed or time runs out.
+        //{
+        //   MissionScore();
+        //}
     }
 
     private void PrintName(GameObject ob)
@@ -73,10 +73,10 @@ public class OreClick : MonoBehaviour {
         string score = "";
         if (progress > 91)
         {
-            score += "You earned an A! Nice job!";
+            score += "You earned an A! Superb mining!";
         } else if (progress > 80 && progress < 91)
         {
-            score += "You earned a B+. ";
+            score += "You earned a B+. You did a great job!";
         }
         else if (progress > 60 && progress < 80)
         {
