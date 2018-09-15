@@ -5,6 +5,7 @@ using UnityEngine;
 public class OreClick : MonoBehaviour {
 
     private double progress = 0;
+    private double rawScoreMultiplier = 1.5;
     
 	private void Update ()
     {
@@ -21,22 +22,22 @@ public class OreClick : MonoBehaviour {
                     {
                         GameObject clickedOre = hit.transform.gameObject;
                         string value = clickedOre.gameObject.tag;
-                        switch (value)
+                        switch (value)  //Each ore of varying size will give more or less progress points.
                         {
                             case "ore1":
-                                progress += (1 * 1.5);
+                                progress += (1 * rawScoreMultiplier);
                                 break;
                             case "ore2":
-                                progress += (2 * 1.5);
+                                progress += (2 * rawScoreMultiplier);
                                 break;
                             case "ore3":
-                                progress += (3 * 1.5);
+                                progress += (3 * rawScoreMultiplier);
                                 break;
                             case "ore4":
-                                progress += (4 * 1.5);
+                                progress += (4 * rawScoreMultiplier);
                                 break;
                             case "ore5":
-                                progress += (5 * 1.5);
+                                progress += (5 * rawScoreMultiplier);
                                 break;
                         }
                         PrintName(clickedOre);
@@ -50,6 +51,10 @@ public class OreClick : MonoBehaviour {
 
         }
 
+        if ()   //ESC is pushed or time runs out.
+        {
+            MissionScore();
+        }
     }
 
     private void PrintName(GameObject ob)
@@ -59,8 +64,30 @@ public class OreClick : MonoBehaviour {
 
     private void MineOre(GameObject ore)
     {
-
         ore.SetActive(false);
         print("This is a dank ore we found. Let's mine it!");
+    }
+
+    private string MissionScore()
+    {
+        string score = "";
+        if (progress > 91)
+        {
+            score += "You earned an A! Nice job!";
+        } else if (progress > 80 && progress < 91)
+        {
+            score += "You earned a B+. ";
+        }
+        else if (progress > 60 && progress < 80)
+        {
+            score += "You earned a B. ";
+        }
+        else if (progress > 40 && progress < 60)
+        {
+            score += "You earned a B-. ";
+        }
+        else
+            score += "You earned a C. Not enough ores were harvested by you.";
+        return score;
     }
 }
