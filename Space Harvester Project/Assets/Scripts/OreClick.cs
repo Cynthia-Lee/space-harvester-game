@@ -5,9 +5,13 @@ using UnityEngine;
 public class OreClick : MonoBehaviour
 {
 
-    public double progress = 0;
+    private double progress = 0;
     private double rawScoreMultiplier = 1.5;
 
+    public double getProgress()
+    {
+        return progress;
+    }
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;

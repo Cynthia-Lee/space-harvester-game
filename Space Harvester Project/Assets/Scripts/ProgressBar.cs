@@ -28,7 +28,7 @@ public class ProgressBar : MonoBehaviour {
 
     private void UpdateProgressBar()
     {
-        double val = OreClick.progress;
+        double val = new OreClick().getProgress();
         float ratio = (float)(val / max);
         //need to make sure it doesn't go over 100...
         currentProgress.rectTransform.localScale = new Vector3(ratio, 1, 1);
@@ -37,7 +37,7 @@ public class ProgressBar : MonoBehaviour {
 
     private void increaseProgress()
     {
-        double val = OreClick.progress;
+        double val = new OreClick().getProgress();
         if(val > 100)
         {
             val = max;
