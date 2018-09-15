@@ -5,7 +5,7 @@ using UnityEngine;
 public class OreClick : MonoBehaviour
 {
 
-    private double progress = 0;
+    public double progress = 0;
     private double rawScoreMultiplier = 1.5;
 
     private void Start()
