@@ -6,6 +6,9 @@ TagManager:
   tags:
   - ore1
   - ore2
+  - ore3
+  - ore4
+  - ore5
   layers:
   - Default
   - TransparentFX

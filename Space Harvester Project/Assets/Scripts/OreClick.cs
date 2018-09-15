@@ -21,27 +21,23 @@ public class OreClick : MonoBehaviour {
                     {
                         GameObject clickedOre = hit.transform.gameObject;
                         string value = clickedOre.gameObject.tag;
-                        if(value == "ore1")
+                        switch (value)
                         {
-                            progress += (1 * 1.5);
-                            print(progress);
-                        }
-                        if(value == "ore2")
-                        {
-                            progress += (2 * 1.5);
-                            print(progress);
-                        }
-                        if(value == "ore 3")
-                        {
-                            progress += (3 * 1.5);
-                        }
-                        if(value == "ore4")
-                        {
-                            progress += (4 * 1.5);
-                        }
-                        if(value == "ore5")
-                        {
-                            progress += (5 * 1.5);
+                            case "ore1":
+                                progress += (1 * 1.5);
+                                break;
+                            case "ore2":
+                                progress += (2 * 1.5);
+                                break;
+                            case "ore3":
+                                progress += (3 * 1.5);
+                                break;
+                            case "ore4":
+                                progress += (4 * 1.5);
+                                break;
+                            case "ore5":
+                                progress += (5 * 1.5);
+                                break;
                         }
                         PrintName(clickedOre);
                         MineOre(clickedOre);
