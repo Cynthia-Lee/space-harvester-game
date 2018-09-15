@@ -51,10 +51,10 @@ public class OreClick : MonoBehaviour {
 
         }
 
-        if ()   //ESC is pushed or time runs out.
-        {
-            MissionScore();
-        }
+        //if ()   //ESC is pushed or time runs out.
+        //{
+        //    MissionScore();
+        //}
     }
 
     private void PrintName(GameObject ob)
