@@ -50,9 +50,9 @@ public class OreClick : MonoBehaviour
                                 progress += (5 * rawScoreMultiplier);
                                 break;
                         }
-                        PrintName(clickedOre);
+                        //PrintName(clickedOre);
                         MineOre(clickedOre);
-                        print(progress);
+                        print("Current progress out of 100: " + progress);
                     }
 
                 }
@@ -79,7 +79,7 @@ public class OreClick : MonoBehaviour
     private void MineOre(GameObject ore)
     {
         ore.SetActive(false);
-        print("This is a dank ore we found. Let's mine it!");
+        //print("This is a dank ore we found. Let's mine it!");
     }
 
     private string MissionScore()
