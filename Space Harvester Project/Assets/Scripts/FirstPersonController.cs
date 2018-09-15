@@ -6,14 +6,19 @@ public class FirstPersonController : MonoBehaviour {
 
     public float mouseSensitivityX = 250f;
     public float mouseSensitivityY = 250f;
-    public float walkSpeed = 8f;
+    public float walkSpeed = 5f;
     //public float runSpeed; //GET TO THIS LATER, if the run key is down then multiply targetMoveAmount = moveDir * runspeed
+    //maybe no run because it is in space
+    public float jumpForce = 220;
+    public LayerMask groundedMask;
 
     Transform cameraT;
     float verticalLookRotation; // ~60 to 60
 
     Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
+
+    bool grounded;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +38,25 @@ public class FirstPersonController : MonoBehaviour {
         //a d or left right key
         Vector3 targetMoveAmount = moveDir * walkSpeed;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
+
+        if(Input.GetButtonDown("Jump")) //jump button is set to space key
+        {
+            if(grounded)
+            {
+                GetComponent<Rigidbody>().AddForce(transform.up * jumpForce);
+            }
+            
+        } //only allow player to jump if they are touching the ground
+        grounded = false;
+        Ray ray = new Ray(transform.position,-transform.up);
+        RaycastHit hit;
+
+        if(Physics.Raycast(ray, out hit, 1 + .1f, groundedMask))
+        {
+            //the capsule has origin in the middle
+            //height of the capsule is 2
+            grounded = true;
+        }
 	}
 
     void FixedUpdate()

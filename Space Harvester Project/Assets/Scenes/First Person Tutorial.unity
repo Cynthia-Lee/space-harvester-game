@@ -184,6 +184,10 @@ Prefab:
       propertyPath: m_TagString
       value: Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 100232, guid: fdaa76d8a02d948629786322cfa288e9, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdaa76d8a02d948629786322cfa288e9, type: 2}
   m_IsPrefabAsset: 0
@@ -426,3 +430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivityX: 250
   mouseSensitivityY: 250
+  walkSpeed: 5
+  jumpForce: 220
+  groundedMask:
+    serializedVersion: 2
+    m_Bits: 512
