@@ -14,7 +14,7 @@ public class OreClick : MonoBehaviour {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 50.0f))
+            if (Physics.Raycast(ray, out hit, 10.0f))
             {
                 if (hit.collider.gameObject.tag.Contains("ore"))   //Contains method? Instead of having to write 5 if loops.
                 {
