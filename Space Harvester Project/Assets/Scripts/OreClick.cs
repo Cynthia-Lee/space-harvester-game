@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OreClick : MonoBehaviour {
-
-    public float force = 25;
-
+    
 	private void Update ()
     {
         if (Input.GetMouseButtonDown(0))
@@ -15,21 +13,16 @@ public class OreClick : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                if (Physics.Raycast(ray, out hit, 100.0f))
+                if (hit.collider.gameObject.tag == "ore")   //Contains method? Instead of having to write 5 if loops.
                 {
-                    if (hit.collider.gameObject.tag == "ore")
+                    if (hit.transform.GetComponent<Rigidbody>())
                     {
-                        //Rigidbody rb = GetComponent<Rigidbody>();
-                        if (hit.transform.GetComponent<Rigidbody>())
-                        {
-                            GameObject clickedOre = hit.transform.gameObject;
-                            PrintName(clickedOre);
-                            MineOre(clickedOre);
-                        }
+                        GameObject clickedOre = hit.transform.gameObject;
+                        PrintName(clickedOre);
+                        MineOre(clickedOre);
                     }
-
                 }
-
+          
             }
 
         }
@@ -43,9 +36,8 @@ public class OreClick : MonoBehaviour {
 
     private void MineOre(GameObject ore)
     {
-        new WaitForSeconds(2);
+
         ore.SetActive(false);
         print("This is a dank ore we found. Let's mine it!");
-        
     }
 }

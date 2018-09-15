@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Planet
-  - ore
+  - ore1
+  - ore2
   layers:
   - Default
   - TransparentFX
@@ -15,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Ground
+  - 
+  - 
   - 
   - 
   - 
