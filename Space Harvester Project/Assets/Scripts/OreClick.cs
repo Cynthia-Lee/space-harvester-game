@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class OreClick : MonoBehaviour {
 
-    private double progress = 0;
+    public static double progress = 0;
     private double rawScoreMultiplier = 1.5;
     
+    //public double getProg()
+    //{
+    //    return progress;
+    //}
+
 	private void Update ()
     {
         if (Input.GetMouseButtonDown(0))
@@ -53,11 +58,11 @@ public class OreClick : MonoBehaviour {
 
         //if ()   //ESC is pushed or time runs out.
         //{
-<<<<<<< HEAD
+//<<<<<<< HEAD
         //   MissionScore();
-=======
+//=======
         //    MissionScore();
->>>>>>> 8d39e9b7095213c4e6388eee61cd44e10dbf0ad0
+//>>>>>>> 8d39e9b7095213c4e6388eee61cd44e10dbf0ad0
         //}
     }
 
